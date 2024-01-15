@@ -6,7 +6,8 @@ name = "pypi"
 [packages]
 fastapi = "0.109.0"
 uvicorn = "0.25.0"
-SQLAlchemy = "2.0.25"
+pydantic = "2.5.3"
+sqlmodel = "0.0.14"
 psycopg2-binary = "2.9.9"
 python-dotenv = "1.0.0"
 
@@ -14,6 +15,8 @@ python-dotenv = "1.0.0"
 pre-commit = "3.6.0"
 pylint = "3.0.3"
 commit-linter = "1.0.3"
+pytest = "7.4.4"
+httpx = "0.23.1"
 
 [requires]
 python_version = "3.9"
