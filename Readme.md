@@ -19,3 +19,19 @@
    docker compose up --build
    ```
    Note: The `--build` is only need when you make any dependencies changes in the project.
+
+
+### Testing
+After creating virtual environment using pipenv. Execute the following command to run test cases
+1. Run all the test cases
+   ```sh
+   pytest .
+   ```
+2. Run test cases of specific folder
+   ```sh
+   pytest tests/<module_name>
+   ```
+3. 2. Run a specific test cases of
+   ```sh
+   pytest tests/<module_name>::<function_name>
+   ```
