@@ -24,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install pipenv
           pipenv install --dev
-          pipenv shell
 
       - name: Run pre-commit checks
-        uses: pre-commit/action@v2.0.0
+        run: |
+          pipenv run pre-commit run --all-files
