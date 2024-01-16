@@ -14,7 +14,8 @@
    pipenv install --dev
    ```
 3. Create a `.env` file by duplicating `.env.example`. Put the values according to your system setup.
-4. Run Docker environment
+4. Create a file to capture logs while development. The file path should be `logs/app.log` inside the project root directory.
+5. Run Docker environment
    ```sh
    docker compose up --build
    ```
@@ -27,7 +28,7 @@ After creating virtual environment using pipenv. Execute the following command t
    ```sh
    pytest .
    ```
-2. Run test cases of specific folder
+2. Run test cases of specific module
    ```sh
    pytest tests/<module_name>
    ```
