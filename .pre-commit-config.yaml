@@ -32,3 +32,13 @@ repos:
             "-rn",
             "-sn",
             ]
+-   repo: local
+    hooks:
+    -   id: pytest-check
+        name: pytest-check
+        types: [python]
+        entry: pytest
+        language: system
+        pass_filenames: false
+        exclude: ^migrations
+        always_run: true

@@ -30,6 +30,7 @@ jobs:
 
       - name: Create logs folder
         run: |
+          mkdir logs
           touch logs/app.log
 
       - name: Run unit test cases
