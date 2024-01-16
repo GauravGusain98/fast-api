@@ -7,6 +7,9 @@ on:
       - main
       - develop
 
+env:
+  APP_LOG_FILE_PATH: "logs/app.log"
+
 jobs:
   pre-commit:
     runs-on: ubuntu-latest
@@ -24,6 +27,11 @@ jobs:
           python -m pip install --upgrade pip
           pip install pipenv
           pipenv install --dev
+
+      - name: Create logs folder
+        run: |
+          mkdir logs
+          touch logs/app.log
 
       - name: Run pre-commit checks
         run: |

@@ -4,9 +4,11 @@ from dotenv import load_dotenv
 from fastapi import FastAPI
 
 from app.api import demo
+from app.logging.utils import initLogging
 
-app = FastAPI()
 load_dotenv()
+app = FastAPI()
+app_logger = initLogging()
 
 DATABASE_URL = f"""postgresql://{os.getenv('POSTGRES_USER')}:{os.getenv('POSTGRES_PASSWORD')}
 @db:5432/{os.getenv('POSTGRES_DB')}"""
