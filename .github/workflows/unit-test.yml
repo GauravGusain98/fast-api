@@ -28,6 +28,10 @@ jobs:
           pip install pipenv
           pipenv install --dev
 
+      - name: Create logs folder
+        run: |
+          touch logs/app.log
+
       - name: Run unit test cases
         run: |
           pipenv run pytest .
